@@ -1,0 +1,28 @@
+int found = 17 * 14 * 12;
+bool y = (found <= ((2 / 3 * 7) - found)) && false;
+if ((6 / 7) <= found) {
+    while ((19 + 20) == 11) {
+        found = (7 + found) - 8 * found;
+        found = 12 + found + 15;
+        print(true || (20 > (10 - found)));
+    }
+    print(found);
+    print(found - (found - found) * 20);
+}
+if (found <= (found * found + found)) {
+    print((17 / 8) - found);
+} else {
+    found = found / 3;
+    if ((found * found) < (found + 11)) {
+        print((found / 9 / 7) - 19);
+        print(found + 0);
+    } else {
+        print(10);
+        y = (found / 5) >= ((found * found - found) + 16 * found);
+    }
+}
+print(found);
+if (found > 0) {
+    found = found / 7 / 1;
+}
+y = found < (4 - 17);

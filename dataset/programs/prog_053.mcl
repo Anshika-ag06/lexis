@@ -1,0 +1,19 @@
+int limit = 14 + 19 + 4;
+int c = limit / 6;
+int a = 0;
+bool size = (limit * c) > (18 * a - limit);
+while ((17 == (14 * c)) || (size == true)) {
+    a = limit * a;
+    print(size || ((a / 7) > limit));
+    bool score = (limit >= ((limit - 17) + c - a)) && (limit < a);
+}
+print((11 - limit) + c);
+a = c + 14;
+print(limit);
+c = (c * 2) * 12 + c;
+while ((((0 * 7) / 5) == limit) || (5 >= 18)) {
+    int total = 17 * 15 + 9;
+    while ((a > 0) && (size == false)) {
+        limit = 20 / 1;
+    }
+}

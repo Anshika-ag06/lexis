@@ -1,0 +1,15 @@
+int x = 5
+int y = 10;
+
+if (x < y {
+    print(x);
+}
+
+while (x < y)
+    x = x + 1;
+    print(x);
+}
+
+) y = 20;
+
+print(y);

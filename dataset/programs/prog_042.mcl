@@ -1,0 +1,27 @@
+bool sum = false;
+int j = 20 - 5;
+if (18 > (j - j)) {
+    bool ok = sum;
+}
+sum = sum && ((j / 1) >= (j - (j - 10) / 5));
+if (sum) {
+    sum = true && ((19 / 8 / 8) > (j - j));
+    bool count = (10 * 12 + j) >= (j / 8);
+    count = (j / 7 - j) <= (j + j);
+}
+while (sum && (((j * j) - 4 / 1) <= (j / 7))) {
+    print(j / 8 * (5 - j));
+    while (((12 * j) <= 4) && false) {
+        j = j / 8;
+        j = 1 / 8 * 0;
+        print(j);
+    }
+}
+if (sum == false) {
+    bool ready = ((0 + 10) < j) && (14 == (j * j));
+} else {
+    if (11 >= (11 - j)) {
+        int done = j - (j / 2 / 4);
+        print(j);
+    }
+}

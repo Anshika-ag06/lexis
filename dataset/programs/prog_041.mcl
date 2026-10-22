@@ -1,0 +1,20 @@
+int y = 14 * 9 * 8;
+bool active = ((y + 4) >= y) || ((y / 9) > 0);
+if ((y - y + y) > ((y - 1) + y)) {
+    if ((10 / 3) >= (y - (y + y))) {
+        print(y + y);
+        int limit = y;
+    } else {
+        bool j = ((13 - (y * 12 / 9)) <= 5) || ((y * y) < y);
+        int a = y * y;
+    }
+} else {
+    y = 18 - 13 * (7 / 8 * y);
+}
+if ((y + 16) == (y * y)) {
+    y = (18 - 5) * y * 15;
+} else {
+    print(y - y - 10);
+    y = 18;
+}
+y = y * 7 + y;

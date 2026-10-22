@@ -1,0 +1,12 @@
+int value = 20 * 6 / 9;
+int total = (value / 8 * 2) / 2;
+int done = value - value + (value + total);
+int z = 4;
+print(7 - 3 + value);
+while (((done / 1) == (total + 0)) || false) {
+    print(done - z);
+    print(false || true);
+    int ok = total;
+}
+total = done - 6;
+print(value);

@@ -1,0 +1,16 @@
+int found = 0;
+bool c = false;
+int step = (found * found) / 5;
+if (((13 + 8) > 15) || ((found - step) >= step)) {
+    int i = step;
+}
+int result = 1;
+print((step + step * 3) * 9);
+c = found < (step * 8);
+if (true && c) {
+    found = result;
+}
+while (result >= 12) {
+    result = 7 / 2 - 2;
+    result = 9 / 2;
+}

@@ -1,0 +1,24 @@
+int a = 13 / 4;
+int n = (a - a) / 3 - (a - a);
+bool total = (7 * a) == a;
+bool y = (a - 5 / 1) <= (n + a - 11);
+int found = n + n;
+int level = a / 7;
+print(a - a);
+found = (20 - 0 * 11) * 16;
+if ((level == (level * (found * a + 15))) && (found <= n)) {
+    print(16);
+    if (((3 / 9) <= 1) || false) {
+        n = 4 - 1;
+        n = a;
+        print(19 + found / 6);
+    } else {
+        print(11);
+        print((level > found) || total);
+    }
+    a = a + (n / 6);
+} else {
+    print(total && ((found - n * found) <= ((level - 14 + 13) * a)));
+    print(n);
+}
+print(found - a - 3);

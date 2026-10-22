@@ -1,0 +1,17 @@
+bool i = false;
+int x = 1;
+bool score = (x * x) >= (18 * (x * 20) * 16);
+int b = x - x - (x / 8 + x);
+while ((x - 18) < (b + b)) {
+    if ((b / 6) >= b) {
+        print((b + (9 / 5) + 7) < x);
+        i = 0 == (x / 5 + 0);
+    } else {
+        i = ((16 * x - 11) > b) && ((x + x) < b);
+    }
+}
+score = i;
+while (i) {
+    score = (10 - 4) >= (b - (7 + 3 - 0) * 14);
+}
+b = x;

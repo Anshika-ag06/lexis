@@ -1,0 +1,16 @@
+int j = 8;
+int level = 20;
+bool n = 6 <= (9 + 16);
+print(16 - level);
+level = 11 * 2;
+if ((n == false) || (n == true)) {
+    print(j / 2 + (13 * 13 + j));
+    if (j <= (level * j - level)) {
+        print(level);
+    } else {
+        print(3 * j / 3);
+        j = 0 / 1 - (level * 3);
+    }
+    int size = j / 8;
+}
+print(level * 4 / 6);

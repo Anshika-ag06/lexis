@@ -1,0 +1,16 @@
+int sum = (2 - 2) - (9 + 17);
+int ready = (sum * 3) - sum;
+sum = ready;
+while (ready == (ready - ready)) {
+    int temp = ready - ready;
+    temp = sum - 4;
+}
+sum = sum * 9;
+if (true && false) {
+    ready = 2 + 17 * 5;
+    print(3 == (sum + ready));
+    if ((sum < ((ready + ready / 5) / 1 / 2)) && ((ready + 6) > sum)) {
+        ready = (3 + 14) + (ready + ready);
+    }
+}
+ready = 14 / 2;

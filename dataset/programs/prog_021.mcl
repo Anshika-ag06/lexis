@@ -1,0 +1,19 @@
+int z = 7;
+bool value = 17 <= z;
+int limit = z;
+bool ready = ((limit - limit) / 8) == (z - 7 * limit);
+print(limit / 5);
+print(14);
+z = limit;
+while ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {
+    if (((limit / 2) > 17) && ((7 * z) > limit)) {
+        print(8);
+        z = limit;
+        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);
+    } else {
+        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));
+    }
+    limit = 6 / 9 - limit;
+    print(z - z - limit);
+}
+print(z / 1);

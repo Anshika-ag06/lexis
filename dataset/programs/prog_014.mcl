@@ -1,0 +1,19 @@
+bool value = true;
+bool ready = ((5 / 4) == (14 - 16 + 13)) || (15 < (15 * 20));
+int ok = 12;
+int x = (ok + ok) + ok;
+ok = 11;
+x = 3 / 5 / 8;
+if ((x * x) >= 4) {
+    if (((7 + x) == (14 + (ok * x) + ok)) || (ok == 14)) {
+        print((x + 3) + x);
+        print((x + x * ok) * x);
+    }
+    print(x - (ok * 5));
+} else {
+    if (5 < (1 / 7)) {
+        print(9 / 9);
+        print(17 + ok);
+        print(((ok - ok / 6) >= (ok * x)) || (x >= (ok * x)));
+    }
+}

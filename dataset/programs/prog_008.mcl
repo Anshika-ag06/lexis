@@ -1,0 +1,23 @@
+bool y = (16 > (1 * 20 / 2)) && false;
+bool b = y;
+int x = 0 / 9;
+int active = x;
+int result = x - (x + x) + (x / 9 - 3);
+b = y || ((result / 7 - result) > result);
+int c = active / 6 / 9;
+if (x <= c) {
+    int ready = result;
+    print(x - result);
+} else {
+    y = y || (c == (17 / 4));
+}
+if ((result - c) >= (5 * result)) {
+    print(result);
+} else {
+    if (((4 * active) < (16 / 5)) || (((x / 3) * c) > (result * c))) {
+        y = (active <= (result - c)) || (c < result);
+        print(13 / 6);
+        bool z = ((active / 8) < (18 + 9)) || ((c - 6 - x) < 20);
+    }
+}
+int temp = 0;

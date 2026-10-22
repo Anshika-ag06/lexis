@@ -1,0 +1,1080 @@
+{
+  "summary": {
+    "label": "few-shot-retry",
+    "backend": "ollama",
+    "model": "qwen2.5:3b",
+    "shots": 3,
+    "adapter": null,
+    "n": 100,
+    "minutes": 21.1,
+    "verified": {
+      "n": 100,
+      "rate": 0.85,
+      "count": 85
+    },
+    "syntax_ok": {
+      "n": 100,
+      "rate": 0.92,
+      "count": 92
+    },
+    "exact": {
+      "n": 100,
+      "rate": 0.7,
+      "count": 70
+    },
+    "by_type": {
+      "extra_rparen": {
+        "n": 15,
+        "verified": 0.8,
+        "exact": 0.8
+      },
+      "keyword_typo": {
+        "n": 13,
+        "verified": 0.8462,
+        "exact": 0.6154
+      },
+      "missing_assign": {
+        "n": 10,
+        "verified": 0.8,
+        "exact": 0.6
+      },
+      "missing_lbrace": {
+        "n": 4,
+        "verified": 1.0,
+        "exact": 0.75
+      },
+      "missing_rbrace": {
+        "n": 5,
+        "verified": 0.6,
+        "exact": 0.2
+      },
+      "missing_rparen": {
+        "n": 16,
+        "verified": 0.9375,
+        "exact": 0.75
+      },
+      "missing_semicolon": {
+        "n": 22,
+        "verified": 0.8636,
+        "exact": 0.8636
+      },
+      "multi": {
+        "n": 10,
+        "verified": 1.0,
+        "exact": 0.6
+      },
+      "operator_swap": {
+        "n": 5,
+        "verified": 0.6,
+        "exact": 0.6
+      }
+    },
+    "verified_with_loop": {
+      "n": 100,
+      "rate": 0.85,
+      "count": 85
+    }
+  },
+  "examples": [
+    {
+      "id": "prog_039-02459",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_012-00757",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int b = 3;\nint y = 5;\nb = 13;\nif ((b + 19) <= (b - 5)) {\n    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);\n    print(b / 5);\n    temp = (8 <= (y * 12 / 2)) || temp;\n}\nprint(4 / 4);\nprint(1 < b);\nprint(3 - b - b);\nprint(y);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03569",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": false,
+      "syntax_ok": false,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found)\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_017-01087",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z / 5);\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01100",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03589",
+      "corruption_type": "missing_lbrace",
+      "group": "missing_lbrace",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02481",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02416",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": false,
+      "syntax_ok": false,
+      "exact": false,
+      "output": "int total;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_021-01318",
+      "corruption_type": "operator_swap",
+      "group": "operator_swap",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01329",
+      "corruption_type": "missing_rbrace",
+      "group": "missing_rbrace",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01081",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01331",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = (6 / 9 - limit);\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_012-00754",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int b = 3;\nint y = 5;\nb = 13;\nif ((b + 19) <= (b - 5)) {\n    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);\n    print(b / 5);\n    temp = (8 <= (y * 12 / 2)) || temp;\n}\nprint(4 / 4);\nprint(1 < b);\nprint(3 - b - b);\nprint(y);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01495",
+      "corruption_type": "multi:keyword_typo+missing_assign+missing_rbrace",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01051",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03605",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": false,
+      "syntax_ok": false,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10)\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_039-02449",
+      "corruption_type": "missing_lbrace",
+      "group": "missing_lbrace",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02465",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01063",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01286",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03558",
+      "corruption_type": "operator_swap",
+      "group": "operator_swap",
+      "verified": false,
+      "syntax_ok": false,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\n(z = ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nprint(count);",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_024-01444",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01476",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01452",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02422",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01077",
+      "corruption_type": "missing_rbrace",
+      "group": "missing_rbrace",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n    if (count) {\n        print(14 > (10 - z));\n        z = z + (z * z) / 5;\n    } else {\n        while ((z + z) >= (7 - 15 / 7)) {\n            z = 3 / 3;\n        }\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02495",
+      "corruption_type": "multi:extra_rparen+missing_rbrace",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03587",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": false,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nprint(count);",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_012-00749",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int b = 3;\nint y = 5;\nb = 13;\nif ((b + 19) <= (b - 5)) {\n    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);\n    print(b / 5);\n    temp = (8 <= (y * 12 / 2)) || temp;\n}\nprint(4 / 4);\nprint(1 < b);\nprint(3 - b - b);\nprint(y);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03599",
+      "corruption_type": "missing_rbrace",
+      "group": "missing_rbrace",
+      "verified": false,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nprint(count);",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_055-03547",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03588",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01310",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01481",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": false,
+      "syntax_ok": false,
+      "exact": false,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true)));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_055-03614",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01321",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = ((limit + limit) - z) > (z * (z - limit * 17) - limit) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01468",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level <= 4);\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03565",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01488",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01086",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01461",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01448",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02500",
+      "corruption_type": "multi:missing_rparen+keyword_typo+missing_rbrace",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n        if (count) {\n            print(temp / 8);\n            print(total + 11);\n        }\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01455",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02471",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01346",
+      "corruption_type": "multi:missing_semicolon+missing_semicolon+extra_rparen",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_012-00732",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int b = 3;\nint y = 5;\nb = 13;\nif ((b + 19) <= (b - 5)) {\n    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);\n    print(b / 5);\n    temp = (8 <= (y * 12 / 2)) || temp;\n}\nprint(4 / 4);\nprint(1 < b);\nprint(3 - b - b);\nprint(y);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01497",
+      "corruption_type": "multi:keyword_typo+operator_swap+missing_rbrace",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) < size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01479",
+      "corruption_type": "operator_swap",
+      "group": "operator_swap",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02451",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03575",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03604",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": false,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nprint(count);",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_039-02454",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01338",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": false,
+      "syntax_ok": false,
+      "exact": false,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1;",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_012-00742",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int b = 3;\nint y = 5;\nb = 13;\nif ((b + 19) <= (b - 5)) {\n    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);\n    print(b / 5);\n    temp = (8 <= (y * 12 / 2)) || temp;\n}\nprint(4 / 4);\nprint(1 < b);\nprint(3 - b - b);\nprint(y);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02487",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03592",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": false,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nprint(count);",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_017-01098",
+      "corruption_type": "missing_rbrace",
+      "group": "missing_rbrace",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n    int flag = (15 - z / 7) + z;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03586",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nif (c >= (13 + 10 / 1)) {\n    c = 6;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01494",
+      "corruption_type": "multi:extra_rparen+missing_rparen",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02480",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    print(count);\n    print(temp / 8);\n    print(total + 11);\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_012-00737",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int b = 3;\nint y = 5;\nb = 13;\nif ((b + 19) <= (b - 5)) {\n    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);\n    print(b / 5);\n    temp = (8 <= (y * 12 / 2)) || temp;\n}\nprint(4 / 4);\nprint(1 < b);\nprint(3 - b - b);\nprint(y);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02473",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01281",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01332",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01467",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01473",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01322",
+      "corruption_type": "missing_lbrace",
+      "group": "missing_lbrace",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02476",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01320",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01316",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01074",
+      "corruption_type": "operator_swap",
+      "group": "operator_swap",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03590",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": false,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nprint(count);",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_055-03580",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nc = 17 / 7;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01106",
+      "corruption_type": "multi:missing_rbrace+missing_rbrace+missing_rparen",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n    if (count) {\n        print(14 > (10 - z));\n        z = z + (z * z) / 5;\n    } else {\n        while ((z + z) >= (7 - 15 / 7)) {\n            z = 3 / 3;\n        }\n    }\n    int flag = (15 - z / 7 + z);\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03598",
+      "corruption_type": "missing_rbrace",
+      "group": "missing_rbrace",
+      "verified": false,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nprint(count);",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_024-01441",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_012-00735",
+      "corruption_type": "missing_lbrace",
+      "group": "missing_lbrace",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int b = 3;\nint y = 5;\nb = 13;\nif ((b + 19) <= (b - 5)) {\n    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);\n    print(b / 5);\n    temp = (8 <= (y * 12 / 2)) || temp;\n}\nprint(4 / 4);\nprint(1 < b);\nprint(3 - b - b);\nprint(y);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02424",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01108",
+      "corruption_type": "multi:missing_lbrace+missing_rbrace+missing_semicolon",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01092",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_024-01498",
+      "corruption_type": "multi:missing_semicolon+missing_rbrace",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "bool z = false && false;\nint size = 2 - 16 * 14;\nint level = (size / 5 - 19) - size + size;\nprint(size / 3);\nint limit = size - (size + 6);\nif (((size / 2) - size) <= size) {\n    if (12 == (size + (size + level))) {\n        bool total = ((limit * size) + 15 * level) <= 4;\n        z = total && (z == false);\n        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));\n    } else {\n        limit = size + size;\n        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));\n    }\n    level = 2 / 5;\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01335",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_012-00769",
+      "corruption_type": "multi:missing_assign+missing_semicolon+missing_rparen",
+      "group": "multi",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int b = 3;\nint y = 5;\nb = 13;\nif ((b + 19) <= (b - 5)) {\n    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);\n    print(b / 5);\n    temp = (8 <= (y * 12 / 2)) || temp;\n}\nprint(4 / 4);\nprint(1 < b);\nprint(3 - b - b);\nprint(y);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01083",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_012-00747",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int b = 3;\nint y = 5;\nb = 13;\nif ((b + 19) <= (b - 5)) {\n    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);\n    print(b / 5);\n    temp = (8 <= (y * 12 / 2)) || temp;\n}\nprint(4 / 4);\nprint(1 < b);\nprint(3 - b - b);\nprint(y);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03562",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01306",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03597",
+      "corruption_type": "extra_rparen",
+      "group": "extra_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03552",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01080",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01050",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02488",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": false,
+      "syntax_ok": false,
+      "exact": false,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        pritn(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_039-02468",
+      "corruption_type": "missing_assign",
+      "group": "missing_assign",
+      "verified": false,
+      "syntax_ok": false,
+      "exact": false,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = ((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": false
+    },
+    {
+      "id": "prog_017-01096",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_017-01064",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 16;\nbool count = z >= (z * (z + 14 - z));\nz = z + z;\nwhile ((z - 13) <= 2) {\n    z = (z + z) + z - z;\n    count = (z + z) < 12;\n    count = 17 == (z * z);\n}\nif (count) {\n    print(14 > (10 - z));\n    z = z + (z * z) / 5;\n} else {\n    while ((z + z) >= (7 - 15 / 7)) {\n        z = 3 / 3;\n    }\n}\nint flag = (15 - z / 7) + z;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01296",
+      "corruption_type": "missing_rparen",
+      "group": "missing_rparen",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_021-01319",
+      "corruption_type": "keyword_typo",
+      "group": "keyword_typo",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int z = 7;\nbool value = 17 <= z;\nint limit = z;\nbool ready = ((limit - limit) / 8) == (z - 7 * limit);\nprint(limit / 5);\nprint(14);\nz = limit;\nwhile ((z == (limit + limit)) || ((19 + (19 + z)) > ((20 * limit) - (z / 2)))) {\n    if (((limit / 2) > 17) && ((7 * z) > limit)) {\n        print(8);\n        z = limit;\n        bool active = (((limit + limit) - z) > (z * (z - limit * 17) - limit)) || ((limit + 17) == 7);\n    } else {\n        print((z > ((limit - z) / 5)) || ((z + limit) == (z * 5)));\n    }\n    limit = 6 / 9 - limit;\n    print(z - z - limit);\n}\nprint(z / 1);",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_039-02492",
+      "corruption_type": "missing_semicolon",
+      "group": "missing_semicolon",
+      "verified": true,
+      "syntax_ok": true,
+      "exact": true,
+      "output": "int total = 12;\nbool count = ((total * 0) >= (total * total * (total + total))) || true;\ncount = total < (total / 9);\nint temp = 6;\ntemp = 2;\nif ((total + total / 1) == 3) {\n    int y = total;\n    if (count) {\n        temp = y;\n        print(count);\n    } else {\n        count = (((4 + total) - temp) > 18) && (temp == 16);\n    }\n} else {\n    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {\n        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);\n    } else {\n        print(6 - total);\n        total = 10 * 5;\n    }\n    if (count) {\n        print(temp / 8);\n        print(total + 11);\n    }\n}\nint n = total;",
+      "verified_with_loop": true
+    },
+    {
+      "id": "prog_055-03602",
+      "corruption_type": "operator_swap",
+      "group": "operator_swap",
+      "verified": false,
+      "syntax_ok": true,
+      "exact": false,
+      "output": "int c = 9;\nint z = c * c;\nint found = c;\nprint((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));\nprint(14 * z * z);\nif (true && false) {\n    print(z - c + found);\n} else {\n    found = c / 1 * 12;\n    bool flag = 3 == (1 + found);\n}\nif ((found <= (c / 7)) || true) {\n    if ((found > 9) || (found > (6 * found * found))) {\n        z = z - found + 18;\n        print(true);\n    }\n}\nif ((z + found) == z) {\n    print(10);\n    int count = 17 / 7;\n    while (c >= (13 + 10 / 1)) {\n        c = 6;\n    }\n}\nprint(count);",
+      "verified_with_loop": false
+    }
+  ]
+}

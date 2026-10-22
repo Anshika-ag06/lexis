@@ -1,0 +1,11 @@
+int x = 5;
+int x = 10;
+bool flag = x;
+y = 3;
+if (x) {
+    print(x);
+}
+while (flag) {
+    int x = 1;
+    print(x);
+}

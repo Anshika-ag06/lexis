@@ -1,0 +1,18 @@
+bool done = false && (7 <= (15 * 4));
+bool level = 20 == 15;
+bool count = false;
+int flag = 0;
+int size = (flag + flag * flag) - flag;
+if (((flag * size) > 17) || ((flag / 8) <= (size + 15))) {
+    print(flag * flag * 9);
+} else {
+    flag = 16 + 17;
+}
+print(count);
+print((12 * 0 * size) + flag);
+while ((flag / 8 - 17) < (size * flag + flag)) {
+    while (flag == (size - 0 * size)) {
+        size = flag;
+    }
+}
+print(flag);

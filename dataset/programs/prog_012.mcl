@@ -1,0 +1,12 @@
+int b = 3;
+int y = 5;
+b = 13;
+if ((b + 19) <= (b - 5)) {
+    bool temp = ((y / 3) <= y) && ((18 * 8 * (y / 1)) > 18);
+    print(b / 5);
+    temp = (8 <= (y * 12 / 2)) || temp;
+}
+print(4 / 4);
+print(1 < b);
+print(3 - b - b);
+print(y);

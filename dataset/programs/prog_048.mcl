@@ -1,0 +1,25 @@
+int done = 17;
+int sum = done * done;
+print((2 * done) + 18);
+int flag = 4 / 7;
+flag = done + done + flag;
+if (((sum / 1) > (4 + 6)) && (sum >= (18 / 9))) {
+    int b = sum * 20;
+    if ((12 == (15 / 2)) || (done >= sum)) {
+        print(((flag / 4) > done) || ((b / 1) >= (4 / 5)));
+        bool score = ((done * b) < 20) && (((sum - 9) + b) < (done + done));
+    }
+    if (true && ((sum / 3) > (flag / 8 * done))) {
+        print(b);
+        b = 18 + done;
+        flag = (17 - b) + flag;
+    } else {
+        print(done);
+    }
+} else {
+    while ((sum >= ((sum / 5 / 3) + 11)) || true) {
+        sum = 5;
+    }
+    done = sum;
+}
+int limit = (4 * sum) - 14;

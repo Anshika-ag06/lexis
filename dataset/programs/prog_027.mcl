@@ -1,0 +1,26 @@
+int z = 12;
+bool ok = true;
+int y = z;
+if ((z * 1) < ((y * z) * y * y)) {
+    while ((12 / 6) > (17 - (z + y))) {
+        z = z / 9;
+    }
+    ok = (z / 1) >= (12 / 1);
+    print(y == (z - y));
+} else {
+    while (((z * 11) > (z - (z / 8 / 7))) || (y > (5 * y))) {
+        ok = (z * (y * 6 / 4)) == 17;
+        print(y / 6 - z);
+    }
+    ok = (z > (z * z)) && (ok == false);
+}
+z = y + (z + 20);
+while (((y * z) <= 6) || (z > (8 / 4))) {
+    while (ok || ((y / 5 / 5) <= 7)) {
+        z = z / 8 / 2;
+        print(z * z - z);
+    }
+    z = 19 + (12 + z) * z;
+    print((14 + 10) + 4 / 3);
+}
+ok = ok || (y >= z);

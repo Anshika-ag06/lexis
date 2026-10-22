@@ -1,0 +1,11 @@
+bool sum = (12 <= (13 + 9 * 17)) && ((14 + 10) >= (14 * (8 - 4 * 14) - 8));
+bool i = ((11 - 6) > 3) && sum;
+int count = 4;
+if (sum) {
+    print(i);
+    print(count - count);
+}
+print(count - 20);
+i = ((5 * count + (count * count - 16)) == 11) || ((5 + count) >= count);
+int j = 11 * count / 8;
+i = ((count / 8) > (j - j)) && ((11 * count) > (12 + 4));

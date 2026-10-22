@@ -1,0 +1,26 @@
+int n = 3;
+bool limit = 0 < 5;
+int j = n * n + 6;
+int count = j;
+if ((((n + 11) / 1) == 17) || (count >= (count + 10))) {
+    if (((count - 16 * count) > (j - count)) || ((j / 9) >= (3 + 16))) {
+        j = (0 - count) - count;
+        n = 1;
+        j = 2 / 5;
+    }
+    int size = count / 3 / 9;
+    if ((16 > 12) || limit) {
+        print((11 - (12 - j)) == (6 - 3 * size));
+    } else {
+        count = j - n / 8;
+    }
+} else {
+    print(limit);
+    if (count >= ((j / 2 + 6) + n)) {
+        print(7 - j + j);
+        j = count - j;
+        int x = j * 13;
+    }
+}
+int done = count;
+int value = done;

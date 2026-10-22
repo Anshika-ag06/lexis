@@ -1,0 +1,24 @@
+int c = 1;
+bool limit = c == (c - (c + c + c));
+int step = c / 8;
+print(limit && ((3 / 3 * (c * step / 8)) <= step));
+while (limit && (step >= c)) {
+    limit = (15 - c) > (step / 4);
+    c = 5;
+    print(step);
+}
+step = 1 / 7;
+if (c >= ((c + 19 + c) / 3 * step)) {
+    limit = (step <= (16 - c)) || ((c * 11 - 10) < (6 / 4));
+} else {
+    if ((11 >= (11 - (step + step + 3))) && (((step / 2) - step - step) > (c + 3))) {
+        limit = (c > (c * 16)) && (c == (c - 17));
+        int a = c + c / 9;
+        int flag = 19;
+    } else {
+        print(step - c / 8);
+        c = step - step;
+    }
+    limit = (limit == false) || ((step / 6 / 4) > step);
+}
+int total = step * c + 5;

@@ -1,0 +1,21 @@
+int active = 15 - 5;
+int c = active;
+active = (c + active + active) + (13 * c);
+print(((0 * c) >= (active - active)) && true);
+if (((active * c) >= 4) && (19 < (9 / 2))) {
+    print((c / 1) < ((c / 9) - c));
+    c = c - (7 - c) * c;
+} else {
+    print(active - c);
+}
+int n = c + active + active;
+while (11 == (active * c)) {
+    if ((active + 19) > (active / 6)) {
+        active = 4 - active;
+    } else {
+        int level = c;
+        print(9);
+    }
+    print(c + n);
+}
+c = n;

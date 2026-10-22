@@ -1,0 +1,9 @@
+int y = 7;
+int level = 13 - 17;
+int result = level;
+result = (13 + y) / 6;
+bool temp = 13 >= ((y / 3) - 13);
+if (temp) {
+    print(((y + result * (13 / 5)) > ((level / 2) - 1)) && true);
+    int value = 17;
+}

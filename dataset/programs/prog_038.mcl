@@ -1,0 +1,23 @@
+bool i = false;
+int found = 20 - 1;
+print(found * 0 - found);
+while (i == true) {
+    while (9 > (1 / 9)) {
+        i = (i == false) && (i == false);
+        bool a = ((0 + (found * found)) > 12) && ((found * 8) == (found * (19 * found)));
+    }
+    found = 18;
+    bool flag = found > 14;
+}
+if (i) {
+    print(found * 1 + found);
+    i = i && i;
+    bool count = true;
+} else {
+    if (((found - found) >= (4 * found - 16)) && ((found / 1) == 15)) {
+        print(i || (i == false));
+    }
+    if ((found <= (found - found * (found * found))) || ((found - found) <= 15)) {
+        i = (20 <= (found + found + (found - found))) && (found > (found / 9 * (found + found)));
+    }
+}

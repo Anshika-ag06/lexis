@@ -1,0 +1,18 @@
+bool sum = ((18 + 3 * 0) - (15 / 8) - (6 - 3 + 17)) >= 1;
+bool y = (((15 * 6) / 3) <= 17) || (16 > 3);
+int count = (2 / 5 * 5) + 13;
+print(20 - count);
+int ok = 20 * 0;
+if (y || (((14 / 7) / 4) == ((count / 3) * 13))) {
+    bool found = true || ((9 - ok - 8) <= (5 + ok));
+} else {
+    count = ok;
+    ok = count - 14;
+}
+if (sum && (count <= (count / 5 - 11))) {
+    ok = ok / 4;
+    print(ok - (10 - 11 * ok));
+}
+if (((ok - ok - 10) >= 20) || (18 == (ok + 9))) {
+    print(((count - count) > (count + count)) && ((count - ok - (2 * ok)) >= ok));
+}

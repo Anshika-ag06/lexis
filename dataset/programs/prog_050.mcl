@@ -1,0 +1,16 @@
+int x = 13 / 9 + 14;
+int i = x;
+if (3 >= x) {
+    if ((((i / 1 + x) - 18) < (i / 7 - 10)) || true) {
+        print((x == 2) && false);
+        i = x - x;
+    }
+    int j = x - i;
+}
+bool score = 8 <= 12;
+if (score == false) {
+    while (((x * (x * 8 + 3)) >= (i + x * 7)) && (i == (15 / 5))) {
+        x = i - x;
+        x = i - 13;
+    }
+}

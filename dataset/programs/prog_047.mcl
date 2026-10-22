@@ -1,0 +1,19 @@
+int temp = 1 + (20 - 1);
+bool c = (temp > (13 + temp)) && (temp <= (temp * (temp * temp) - (16 + temp / 6)));
+int size = temp - temp;
+int b = 1 / 9 + size;
+size = b - 2;
+int j = 19;
+if (temp <= (b + temp - size)) {
+    size = temp;
+}
+while (((4 + temp - size) > (b / 6)) && (20 >= ((4 - b / 5) - temp * 20))) {
+    if ((temp == j) || (7 <= (16 + temp))) {
+        print(j + size * j);
+    } else {
+        bool i = c && c;
+        print((size == (18 + temp)) || ((j + 1 - b) >= (size + (j * temp))));
+    }
+    size = 7;
+}
+print(20 / 1);

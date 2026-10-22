@@ -1,0 +1,8 @@
+int z = 14;
+int step = 18 / 1;
+int y = 19 * z;
+bool score = (20 - z - (z / 1)) == (y / 3);
+z = z / 6 * y;
+y = step - y;
+print(12);
+int value = 13;

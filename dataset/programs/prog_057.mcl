@@ -1,0 +1,14 @@
+int i = 17 / 9;
+int ready = 14 + i;
+while ((ready / 8) <= (ready + i)) {
+    i = ready;
+}
+print((i * i) - (ready * ready * i));
+if ((17 + 10) <= (ready / 6)) {
+    print(i);
+    bool flag = ((ready * ready) > ready) || ((i * 15) >= ready);
+}
+while (((i - ready) - 10) > 18) {
+    int result = i + ready;
+    i = 15;
+}

@@ -1,0 +1,21 @@
+int limit = 5;
+int ready = 14 + (12 - 19) * limit;
+int flag = ready + limit;
+int found = 10;
+if (((10 * flag) <= found) && (((18 + 5) * 12) < (flag + 10 - 17))) {
+    bool count = ((flag - 0) >= limit) || (found < flag);
+    count = (7 >= flag) && ((found - flag) < (ready + 13 - 13));
+    print(15 + found - (limit * limit - ready));
+}
+ready = limit;
+if (found == 10) {
+    ready = 7 - limit / 4;
+    print((limit / 3 * flag) >= (7 / 6));
+    if ((ready - flag) == (flag / 6 * 20)) {
+        print(false && ((limit - 12 * 10) >= ((9 - 0) * flag * flag)));
+    }
+} else {
+    print(flag + 17);
+    int sum = found + 4;
+}
+print((3 + 4) - (13 - flag));

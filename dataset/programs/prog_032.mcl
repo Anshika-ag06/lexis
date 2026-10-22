@@ -1,0 +1,12 @@
+int y = 7 / 9;
+int x = y;
+bool found = (x + y) == (10 * y);
+if ((found == true) && (y >= x)) {
+    print((x * 5) / 6 - y);
+} else {
+    print((10 / 1) == (13 / 2));
+}
+int ok = y - y;
+x = (ok - 15) * ok;
+found = ((ok + y * 10) > ok) && found;
+int active = y;

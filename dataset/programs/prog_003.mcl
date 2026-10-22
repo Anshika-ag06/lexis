@@ -1,0 +1,26 @@
+int i = 14 / 4;
+int count = (4 * 11 - i) + (12 - i);
+int step = (3 + 9) * 2;
+print(false);
+i = count + step;
+print(((step - count) * 20) >= 9);
+while (((i + step) >= count) || (i == (step - (step / 5) + (15 / 1 + step)))) {
+    while ((count + i) < (count / 2 + (count - 0))) {
+        print(i - count);
+    }
+    print(20);
+}
+if (((i + 9) <= ((count / 3) / 7)) && ((step / 1) < ((10 + 5 * step) / 1 * count))) {
+    while ((count + (count * count)) < step) {
+        int sum = i;
+        i = i * i;
+    }
+    int score = 14;
+}
+if ((9 > (count / 6)) && ((count + i) == (5 - step))) {
+    count = i;
+} else {
+    if ((i / 6) < i) {
+        print(count);
+    }
+}

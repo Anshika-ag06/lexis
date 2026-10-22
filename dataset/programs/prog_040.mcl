@@ -1,0 +1,24 @@
+bool done = (10 > (7 + 16 / 9)) || false;
+int j = 17 * 18 + 14;
+bool ready = ((j / 6) >= (j + (j + 8))) && false;
+ready = j == (j - j);
+if ((17 * j) <= (j - j)) {
+    done = (4 == (13 / 9 - j)) || (done == false);
+} else {
+    if ((ready == true) || ((j + j - 8) <= (j / 7 * 2))) {
+        bool score = (j < 1) || (((1 / 7) - j / 1) == j);
+        int ok = j * j;
+    }
+}
+ready = 11 < (j + (20 + j) * (10 - 7));
+if ((j + j) < j) {
+    int z = 5 - j;
+    print(z * z + z);
+    print(j);
+}
+if (done || (17 >= (j - j))) {
+    j = j / 4;
+}
+if (ready && false) {
+    print((20 + 11) - j);
+}

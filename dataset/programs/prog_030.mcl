@@ -1,0 +1,28 @@
+int size = 13 + 19;
+int count = size / 2 / 9;
+int flag = count + size;
+int result = size;
+if ((size * flag) >= 18) {
+    print(0 < flag);
+    bool temp = false && ((size / 2) < ((14 * size * count) / 6));
+} else {
+    flag = 8;
+    size = size / 5 + 14;
+}
+if ((count <= 18) || ((size + (flag + count / 8) - 15) > result)) {
+    count = 6;
+}
+if ((8 / 3) < (flag * 12 + count)) {
+    size = flag / 8 / 1;
+    while ((result + 4) > (size / 2 * result)) {
+        print(size - count);
+        size = result;
+    }
+    if (true && (size == flag)) {
+        print(result);
+        print(result - result - count);
+        print(false);
+    }
+} else {
+    print(result);
+}

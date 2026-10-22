@@ -1,0 +1,16 @@
+bool z = false && false;
+int size = 2 - 16 * 14;
+int level = (size / 5 - 19) - size + size;
+print(size / 3);
+int limit = size - (size + 6);
+if (((size / 2) - size) <= size) {
+    if (12 == (size + (size + level))) {
+        bool total = ((limit * size) + 15 * level) <= 4;
+        z = total && (z == false);
+        print(((limit - size * 16) == ((9 - size) * 1)) || (total == true));
+    } else {
+        limit = size + size;
+        print(((1 - size) <= (size + size)) && (((limit * 18 + level) * 13 * 3) < 18));
+    }
+    level = 2 / 5;
+}

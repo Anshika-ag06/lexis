@@ -1,0 +1,14 @@
+int x = 5;
+int y = 10;
+bool flag = true;
+
+if (x < y) {
+    print(x);
+} else {
+    print(y);
+}
+
+while (x < y) {
+    x = x + 1;
+    print(x);
+}

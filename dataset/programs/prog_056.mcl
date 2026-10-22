@@ -1,0 +1,22 @@
+int c = 14 * 10;
+int a = 2 + 2;
+int y = c;
+bool j = (y + a / 4) >= (a + y / 8);
+if ((a == c) && j) {
+    print(y / 5 + (9 * a + 4));
+    int score = 18 * 0 + 19;
+    int flag = (score / 3 * score) * 12 - y;
+}
+j = ((11 / 6 + y) == c) || (a > ((c + 0 - c) / 1));
+if (((17 / 2) < (19 - (7 / 3) / 8)) || j) {
+    int found = 7 + 3;
+    y = found;
+} else {
+    y = c - 2 + y;
+    if ((a < 16) || (a == (12 + c))) {
+        c = 12 * 2;
+        c = a;
+    } else {
+        j = j && ((11 * c + y) <= (9 + c - c));
+    }
+}

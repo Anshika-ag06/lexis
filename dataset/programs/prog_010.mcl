@@ -1,0 +1,19 @@
+bool ready = ((5 * 13 * 8) == ((19 / 4 * 0) / 6)) && ((7 + 6) > (4 - 11 / 8));
+int flag = 7;
+int z = (19 + flag) * 10;
+bool found = ((20 - 6) < 20) && (ready == false);
+int n = z + 2;
+int sum = n;
+int y = 6;
+while (y <= 4) {
+    if ((4 / 7 * flag) > ((sum - sum) / 3 + (sum * y))) {
+        sum = flag;
+        n = sum;
+        print(8);
+    } else {
+        found = (((flag - z) + y) == (n + sum)) || ((sum / 6 / 6) <= ((n + 17) + n));
+    }
+    y = flag / 2;
+    int done = 4;
+}
+sum = y;

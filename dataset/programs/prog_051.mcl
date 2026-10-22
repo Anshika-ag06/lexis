@@ -1,0 +1,28 @@
+int done = 19;
+int a = done;
+bool y = ((a + (done - a)) == (a - 18)) && false;
+while (y) {
+    while ((2 < (done / 2)) || y) {
+        print(a);
+        print(done);
+    }
+    while ((done * (11 / 9)) <= (0 / 2)) {
+        print(a);
+        print(3);
+    }
+    y = true;
+}
+if ((a / 6 - (17 - 1)) >= done) {
+    int sum = done + 7;
+}
+done = 7 / 7;
+while (a >= (a * a)) {
+    if (y) {
+        bool j = ((a * 18) == done) || y;
+    }
+    y = (y == false) || (a >= ((done + 4) - 7));
+}
+y = (a >= (done - 20 + a)) || ((a - a / 3) == (5 - 18));
+if ((y == true) && (a < (7 * 16))) {
+    done = a;
+}

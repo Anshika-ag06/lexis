@@ -1,0 +1,10 @@
+int ready = 2 * 3 - 5;
+int level = ready;
+int result = 2 * (level + level / 4) - level;
+int found = result + 15 * level;
+result = (10 / 8) + level;
+if ((6 / 6) <= (9 / 7)) {
+    print(false);
+    result = 4;
+}
+ready = found;

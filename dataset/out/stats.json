@@ -1,0 +1,86 @@
+{
+  "programs_found": 60,
+  "programs_valid": 60,
+  "programs_rejected": [],
+  "programs_per_split": {
+    "test": 6,
+    "val": 6,
+    "train": 48
+  },
+  "examples_per_split": {
+    "train": 3101,
+    "val": 398,
+    "test": 408
+  },
+  "examples_total": 3907,
+  "examples_per_type_per_split": {
+    "train": {
+      "missing_rbrace": 142,
+      "missing_rparen": 444,
+      "missing_assign": 394,
+      "extra_rparen": 444,
+      "multi": 287,
+      "operator_swap": 74,
+      "keyword_typo": 577,
+      "missing_semicolon": 555,
+      "missing_lbrace": 184
+    },
+    "val": {
+      "missing_rparen": 55,
+      "missing_semicolon": 73,
+      "multi": 36,
+      "extra_rparen": 55,
+      "missing_lbrace": 21,
+      "keyword_typo": 71,
+      "missing_assign": 61,
+      "missing_rbrace": 14,
+      "operator_swap": 12
+    },
+    "test": {
+      "missing_rparen": 60,
+      "missing_semicolon": 73,
+      "missing_lbrace": 24,
+      "extra_rparen": 60,
+      "missing_assign": 49,
+      "operator_swap": 14,
+      "missing_rbrace": 17,
+      "keyword_typo": 75,
+      "multi": 36
+    }
+  },
+  "corruptions_attempted_per_type": {
+    "missing_semicolon": 701,
+    "keyword_typo": 723,
+    "missing_assign": 504,
+    "missing_rparen": 559,
+    "operator_swap": 288,
+    "extra_rparen": 559,
+    "missing_lbrace": 229,
+    "missing_rbrace": 173,
+    "multi": 360
+  },
+  "corruptions_accepted_per_type": {
+    "missing_semicolon": 701,
+    "keyword_typo": 723,
+    "missing_assign": 504,
+    "missing_rparen": 559,
+    "operator_swap": 100,
+    "extra_rparen": 559,
+    "missing_lbrace": 229,
+    "missing_rbrace": 173,
+    "multi": 359
+  },
+  "acceptance_rate_per_type": {
+    "missing_semicolon": 1.0,
+    "keyword_typo": 1.0,
+    "missing_assign": 1.0,
+    "missing_rparen": 1.0,
+    "operator_swap": 0.347,
+    "extra_rparen": 1.0,
+    "missing_lbrace": 1.0,
+    "missing_rbrace": 1.0,
+    "multi": 0.997
+  },
+  "max_prompt_chars": 2474,
+  "seed": 42
+}

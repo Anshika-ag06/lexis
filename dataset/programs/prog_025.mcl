@@ -1,0 +1,10 @@
+int flag = 18 / 5 * 5;
+int n = 0 * flag - 19;
+int ok = 16 + (19 / 4);
+n = 1;
+n = (7 / 4) - (16 / 9);
+print(ok - ok + ok);
+while (((ok * (12 + 10 - ok) / 8) >= ok) && ((n + 15) >= (7 * flag))) {
+    print((flag * ok) < flag);
+}
+print(true && true);

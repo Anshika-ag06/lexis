@@ -1,0 +1,16 @@
+int x = 5 * 2 * 0;
+int count = x / 2;
+bool result = (count * 9 * x) == (10 / 5);
+if ((count - x - count) < (count * (x + count) / 6)) {
+    print(((3 + (2 / 4 - count) / 1) < (3 * x)) || ((count + 2 / 6) == (count - 16)));
+    print(count / 8);
+    x = count;
+}
+bool total = result;
+count = count - x;
+print(x * x + x);
+if (count == (x * count - x)) {
+    print(11 / 6 * x);
+    print(x * count + 14);
+}
+int z = x;

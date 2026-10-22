@@ -1,0 +1,17 @@
+int z = 16;
+bool count = z >= (z * (z + 14 - z));
+z = z + z;
+while ((z - 13) <= 2) {
+    z = (z + z) + z - z;
+    count = (z + z) < 12;
+    count = 17 == (z * z);
+}
+if (count) {
+    print(14 > (10 - z));
+    z = z + (z * z) / 5;
+} else {
+    while ((z + z) >= (7 - 15 / 7)) {
+        z = 3 / 3;
+    }
+}
+int flag = (15 - z / 7) + z;

@@ -1,0 +1,12 @@
+bool sum = ((0 * 1) <= 12) && ((1 - (8 * 17)) <= 1);
+int count = 0;
+count = 7;
+int flag = count;
+int c = count;
+c = flag - (20 - 16) + c;
+print(count);
+if (((count + c / 5) == (count / 8)) && ((19 - c * flag) < c)) {
+    print(flag);
+} else {
+    print(flag);
+}

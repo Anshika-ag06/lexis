@@ -1,0 +1,16 @@
+bool active = (8 - 15) >= (8 - 11);
+bool a = ((14 * 11) == (0 * 8 + 6)) || (active == true);
+bool step = ((7 * 1) / 8) <= (5 + 16);
+int ok = 18;
+print(step || a);
+while (ok <= (ok - ok - ok)) {
+    print((ok + ok) + 17);
+    if (((ok - 8 * ok) >= (ok + 0 * ok)) && (ok <= (13 / 7))) {
+        active = (a == true) || active;
+    } else {
+        print(ok - 10);
+    }
+}
+active = step;
+step = step == true;
+print(ok);

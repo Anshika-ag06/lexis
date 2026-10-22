@@ -1,0 +1,12 @@
+int done = 1;
+int flag = done + 18 + done;
+int j = flag;
+bool size = false;
+while (((done / 1 + done) + j + j) >= j) {
+    print(j);
+    print(j - flag);
+    print(11);
+}
+flag = flag / 5 - j;
+print(j);
+size = false;

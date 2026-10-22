@@ -1,0 +1,11 @@
+bool found = (14 + 14) >= (17 + 15);
+int b = 12 + 16;
+int temp = b / 5;
+int i = (b * 11) + temp;
+bool result = (4 * (1 - 0) / 2) == (b * b);
+bool a = i >= (6 - (temp - 10) + i);
+if ((19 < (4 - temp)) && found) {
+    result = i > (i - 8 / 2);
+    int done = temp - temp;
+    i = 18;
+}

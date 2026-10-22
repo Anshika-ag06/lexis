@@ -1,0 +1,26 @@
+bool j = true;
+bool flag = 18 > (9 - (14 - 6 * 14) - 12);
+int done = 7;
+if ((done == (done / 5)) || (done <= (7 / 1))) {
+    if ((15 > (14 + 2)) && ((done * (done - done)) <= done)) {
+        flag = ((19 / 7 / 2) <= done) || (flag == true);
+        done = 17;
+    } else {
+        int sum = (done * done) * done;
+        int temp = (done - 19 / 5) * sum;
+    }
+} else {
+    done = done / 7;
+    while ((done + done * done) >= (done / 5)) {
+        flag = (done >= (0 * done)) && flag;
+        int i = done + done * done;
+    }
+}
+while ((done * done - done) >= done) {
+    flag = false && (((done - done) / 9 - 3) == 6);
+    while ((17 / 8) <= (1 - 16)) {
+        bool total = (done > 17) || flag;
+        int z = done * 6;
+    }
+}
+print(flag == true);

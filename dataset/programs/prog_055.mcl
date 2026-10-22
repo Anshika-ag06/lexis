@@ -1,0 +1,24 @@
+int c = 9;
+int z = c * c;
+int found = c;
+print((z == ((found - z / 7) / 4 * z)) || (((z - 12) / 5 + c) < (found - 9 * c)));
+print(14 * z * z);
+if (true && false) {
+    print(z - c + found);
+} else {
+    found = c / 1 * 12;
+    bool flag = 3 == (1 + found);
+}
+if ((found <= (c / 7)) || true) {
+    if ((found > 9) || (found > (6 * found * found))) {
+        z = z - found + 18;
+        print(true);
+    }
+}
+if ((z + found) == z) {
+    print(10);
+    int count = 17 / 7;
+    while (c >= (13 + 10 / 1)) {
+        c = 6;
+    }
+}

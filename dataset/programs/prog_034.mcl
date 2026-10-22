@@ -1,0 +1,20 @@
+int j = 16 * 3;
+bool result = ((19 - 7) == j) || ((13 * j) == (16 + 0 * j));
+bool sum = (j * j) <= (4 - 10);
+if (j >= (j * (j / 4 - 5))) {
+    result = ((0 - j) <= (j / 2)) || ((4 - j) >= (3 - j));
+    sum = (j * (20 * j)) == j;
+    print(j - 9);
+} else {
+    if ((8 + j) < (19 - j)) {
+        print((j * j) >= j);
+        result = result || result;
+    } else {
+        print((j / 3 * 17) < (20 - j));
+        int a = j - 7 * (13 * j + j);
+    }
+    print((j * 3 - j) + 4 / 5);
+}
+sum = (19 / 8 + j) >= (j * j);
+sum = (j - j * j) == (j * j);
+result = j <= (j + 5);

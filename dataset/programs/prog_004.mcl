@@ -1,0 +1,23 @@
+bool step = (9 * 1 * 11) >= ((11 - 12 / 4) / 3);
+int done = 11 - 4;
+done = done + 6;
+print(done / 2 - 19);
+if ((((done - done) + done) > (done / 5 - 14)) && (done > (done / 7))) {
+    step = (done * done) >= (4 + 3);
+} else {
+    print((done > 8) && (done >= (done - done)));
+    if (((done * 18 - 14) == done) || (step == false)) {
+        print((done > (done + done)) && (done == (done * done + done)));
+        print(7 + (done + 3));
+        bool total = step && ((done * 15) == ((14 / 3) + done));
+    }
+}
+print((9 - (done - 10 - 10) - 17) >= (0 - done));
+if ((done > ((0 - 20) + done)) && step) {
+    if (step == true) {
+        bool active = step || (10 > (done + done * done));
+    }
+    done = 1;
+    int sum = 5 * done;
+}
+print(done);

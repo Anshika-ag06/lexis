@@ -1,0 +1,11 @@
+int temp = 4;
+int value = temp;
+int ok = (temp * 7) * 19 + temp;
+while ((value / 3) > value) {
+    while (((temp * temp) * (4 + ok / 6)) >= temp) {
+        print(ok);
+    }
+}
+int done = (15 / 2) - temp;
+int i = ok;
+temp = i - i;

@@ -1,0 +1,10 @@
+bool ok = (20 >= 2) && true;
+int x = 8 + 7 / 5;
+int temp = (x * x) / 3;
+bool a = (x - x + x) == (temp / 5);
+bool score = 16 == (0 / 3 * x);
+print(x);
+print(temp);
+bool y = a;
+print(10 / 2);
+print(17 - temp);

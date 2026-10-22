@@ -1,0 +1,28 @@
+bool step = true || ((4 / 7) == (19 * 12));
+int temp = 0;
+int active = temp + 15 * temp;
+print(step == false);
+print(active + active);
+if (step) {
+    if (((temp / 8) / 9) > ((temp * 3 + 5) / 3 + active)) {
+        print(temp * (active - 2));
+    } else {
+        bool z = ((16 * temp) == (temp * temp / 3)) && ((temp * active) >= (active * 9));
+    }
+    while ((active / 4 + active) == active) {
+        bool y = step == false;
+        y = true && (active <= (18 / 4 - temp));
+        print(temp < (active / 7));
+    }
+} else {
+    if (((active - 18 + 7) == (9 + active)) || true) {
+        print(active);
+        print(18);
+        step = step == true;
+    }
+    print(15 - active);
+}
+active = 10 + 11;
+while (step == false) {
+    print((active / 8) - active);
+}

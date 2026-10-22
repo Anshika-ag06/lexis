@@ -1,0 +1,17 @@
+bool n = false;
+int z = 1;
+bool temp = 5 == ((z / 6) - z);
+if (n) {
+    if ((z + 2 / 9) > (17 - z * 2)) {
+        print(z);
+        z = z - z;
+    }
+    if (temp && (15 > (z + (14 - z) / 4))) {
+        temp = (18 < (z / 8 - z)) && ((1 / 6) < (18 + z + z));
+    } else {
+        print(z);
+        print(z);
+    }
+    bool j = ((4 / 7) == z) || (1 < (7 + 6 / 3));
+}
+int flag = z / 1 * z;

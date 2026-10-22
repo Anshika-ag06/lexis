@@ -1,0 +1,26 @@
+int total = 12;
+bool count = ((total * 0) >= (total * total * (total + total))) || true;
+count = total < (total / 9);
+int temp = 6;
+temp = 2;
+if ((total + total / 1) == 3) {
+    int y = total;
+    if (count) {
+        temp = y;
+        print(count);
+    } else {
+        count = (((4 + total) - temp) > 18) && (temp == 16);
+    }
+} else {
+    if (((total + (temp - temp)) == (temp * 9)) && ((total - total) < total)) {
+        bool result = (((0 + temp) * total - 2) <= temp) || (3 > 8);
+    } else {
+        print(6 - total);
+        total = 10 * 5;
+    }
+    if (count) {
+        print(temp / 8);
+        print(total + 11);
+    }
+}
+int n = total;
