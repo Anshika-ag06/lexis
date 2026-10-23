@@ -1,68 +1,134 @@
-# MCL Compiler: Intelligent Syntax Error Recovery with Self-Validating Repair
+# Lexis: Compiler with Intelligent Syntax Error Recovery and a Self-Validating Repair Layer
 
-BCSE307P Compiler Design Laboratory.
+BCSE307P Compiler Design Laboratory, final project (Review 3).
 
-A compiler front end for MCL (Mini Compiler Language) that does not stop at the
-first error. It recovers from syntax mistakes, checks types and scopes, generates
-three-address code, and can propose a repair for a broken program and then
-**verify the proposal with the compiler itself**. Four repair methods are compared
-on a held-out test set.
+Lexis is a compiler front end for **MCL (Mini Compiler Language)**. It finds every
+independent syntax error in a program in a single pass, records each one as a structured
+object, proposes a repair for each, and then **verifies the repair by running the parser
+again**. A fix is only called *verified* if the patched program parses with zero errors.
 
-## What is in the project
+> The model or rule proposes. The compiler alone decides whether a fix is correct.
 
-| Stage | Files | Phase |
+## Scope
+
+### Compiler front end
+- Hand-written **lexical analyzer** (`mcl_lexer.py`): keywords, identifiers, integer and
+  boolean literals, operators, delimiters, `//` comments, lexical errors (illegal characters,
+  malformed numbers such as `12abc`).
+- Hand-written **recursive-descent parser** (`mcl_parser.py`) for declarations, assignment,
+  `if` / `else`, `while`, `print`, and expressions with correct precedence.
+- **AST** (`mcl_ast.py`) with an `ErrorNode` placeholder for gaps the parser could not recover.
+- **Multi-error recovery**: phrase-level insertion for a missing `;` and `)`, panic-mode
+  resynchronization at `;`, `{`, `}` or EOF for everything else.
+- **Structured errors** (`mcl_errors.py`): every recovery event is a `SyntaxErrorRecord`
+  (`expected_token`, `actual_token`, `line`, `column`, `recovery_action`, `snippet`).
+- Symbol table and semantic analysis, three-address code generation, Graphviz DOT export of
+  the AST.
+
+### Repair layer
+- **Corruption engine** that breaks valid MCL programs in one controlled, reversible way,
+  so the correct fix is known exactly and labelled data comes for free.
+- Four repair strategies behind one interface:
+  rules, zero-shot LLM, few-shot LLM, and a hybrid (rules first, LLM as fallback).
+  LLM strategies use `qwen2.5:3b` running locally through Ollama.
+- **Self-validating fix loop**: apply the patch, re-lex and re-parse, label it
+  `VERIFIED` or `UNVERIFIED`.
+- **Evaluation** on 100 test examples with two metrics: verified-fix rate (patched program
+  parses) and exact-match rate (patched program equals the original).
+
+## Results (100 test examples)
+
+| Strategy | Verified | Exact match |
 |---|---|---|
-| Lexer, parser with panic-mode and phrase-level recovery, AST | `mcl_lexer.py` `mcl_parser.py` `mcl_ast.py` `mcl_errors.py` `ast_printer.py` | 1 |
-| Symbol table, semantic analysis, three-address code, AST diagram, corruption engine | `mcl_symtable.py` `mcl_semantic.py` `mcl_irgen.py` `mcl_ast_dot.py` `mcl_corruption.py` | 2 |
-| Verifier, prompt format, dataset builder, program generator | `mcl_check.py` `mcl_prompt.py` `build_dataset.py` `mcl_program_gen.py` | 3 |
-| Repair methods and the self-validating fix loop | `mcl_rule_repair.py` `mcl_llm.py` `mcl_repair.py` | 3 |
-| Evaluation | `evaluate_model.py` `compare_results.py` | 3 |
+| Hybrid (rules + LLM fallback) | 99% | 93% |
+| Rules | 97% | 91% |
+| Few-shot LLM | 85% | 70% |
+| Zero-shot LLM | 75% | 56% |
 
-## The four repair methods
+Verified does not imply exact: a model often produces a program that parses but is not what
+the programmer originally wrote. That gap is why every fix is re-parsed and why exact match
+is reported separately.
 
-| Method | What proposes the fix |
-|---|---|
-| A. `rules` | Hand-written small edits near the error. No AI. |
-| B. `ollama --shots 0` | A local LLM (Ollama) sees the program and the compiler's diagnostics. |
-| C. `ollama --shots 3` | The same, plus 3 worked examples drawn only from the training split. |
-| D. `hybrid` | Rules first; the LLM only when the rules cannot fix it. |
+## Design decision: LoRA fine-tuning
 
-Every proposed fix goes back through the lexer, parser and semantic analyzer.
-**Verified** means it passes all three. **Exact** means it equals the original
-program. Several different programs can be valid, so exact is the stricter metric.
+The original plan fine-tuned a small code model (Qwen2.5-Coder-0.5B-Instruct) with LoRA on the
+generated dataset. The training run could not be completed on Google Colab, so the project
+used its planned fallback: a pretrained model used zero-shot, few-shot and inside the hybrid.
+The verification loop, which is the core contribution, is unaffected. LoRA fine-tuning is
+listed under the roadmap as future work.
 
-## Dataset
+## Project layout
 
-`build_dataset.py` takes valid programs (`dataset/programs/`, made by
-`mcl_program_gen.py`), breaks them in nine ways, keeps only corruptions the real
-parser rejects, and splits **by program** into train / validation / test so the
-test programs are never seen in any form during development.
-See `dataset/out/stats.json`.
-
-## Running it
-
-```bash
-python3 -m pytest tests -q                                   # all tests
-python3 main.py tests/programs/valid_basic.mcl               # lexer -> parser -> semantic -> TAC
-python3 main.py tests/programs/malformed_multi_error.mcl --repair --method rules
-python3 main.py tests/programs/malformed_multi_error.mcl --repair --method ollama --shots 3
-python3 build_dataset.py                                     # rebuild the dataset
+```
+lexis/
+├── mcl_lexer.py          # Tokenizer + LexicalError
+├── mcl_ast.py            # AST node dataclasses
+├── mcl_errors.py         # SyntaxErrorRecord (structured diagnostic object)
+├── mcl_parser.py         # Recursive-descent parser + phrase-level / panic-mode recovery
+├── ast_printer.py        # Indented AST pretty-printer (demo only)
+├── main.py               # CLI driver: lexer + parser on a .mcl file
+├── corruption_engine.py  # Phase 2: controlled, reversible program corruption
+├── dataset_builder.py    # Phase 2: builds labelled (broken, correct) pairs
+├── validate_fix.py       # Phase 2: re-parse validation (VERIFIED / UNVERIFIED)
+├── ...                   # symbol table, semantic analysis, TAC, repair strategies,
+│                         # evaluation harness (see CODE_EXPLAINED.md)
+├── tests/
+│   ├── test_lexer.py
+│   ├── test_parser.py
+│   └── programs/
+│       ├── valid_basic.mcl            # clean program, no errors
+│       ├── malformed_multi_error.mcl  # 4 independent errors recovered in one pass
+│       └── lexical_error.mcl          # malformed literal + illegal character
+├── requirements.txt
+├── README.md             # this file
+├── CODE_EXPLAINED.md     # module-by-module walkthrough
+└── HOW_TO_RUN.md         # commands and expected output
 ```
 
-See `PHASE3_GUIDE.md` for the full evaluation run.
+## Quick start
+
+```bash
+python3 main.py tests/programs/valid_basic.mcl            # clean program
+python3 main.py tests/programs/malformed_multi_error.mcl  # 4 errors, one pass
+python3 main.py tests/programs/lexical_error.mcl          # fatal lexical error
+pytest tests/ -v                                          # unit tests
+```
+
+Requires Python 3.9+. The compiler itself has no dependencies; `pytest` is needed for tests,
+and Ollama with `qwen2.5:3b` is needed only for the LLM repair strategies. See
+`HOW_TO_RUN.md` for details.
+
+## Mapping to compiler concepts
+
+| Concept | Where |
+|---|---|
+| Lexical analysis | `mcl_lexer.py` |
+| Context-free grammar, top-down parsing, precedence | `mcl_parser.py` (`expr` / `term` / `factor`) |
+| Syntax tree | `mcl_ast.py`, `ast_printer.py`, DOT export |
+| Syntax error recovery | `Parser._expect()` (phrase-level), `Parser._panic_mode()` |
+| Symbol table, semantic analysis | Phase 2 modules |
+| Intermediate code | Three-address code module |
+| Verification of repairs | `validate_fix.py` and the fix loop |
 
 ## Known limitations
 
-- The corruptions are synthetic and partly mirror the rule-based repairs, so the
-  benchmark favours method A. Real student mistakes would be messier.
-- The test split is 6 programs (408 examples); some error types have few examples.
-- `!=` is lexed but cannot yet be parsed in an expression (a Phase 1 grammar gap).
-- Semantic errors report a line number but no column.
-- Rule-based placement of a missing `)` or `}` relies on the program being
-  indented consistently.
-- No interpreter: three-address code is generated but not executed.
+- Lexical errors are fatal: the lexer stops at the first illegal character or malformed
+  literal. Recovering from them is a separate problem and is left as future work.
+- `COMPARISON_OPS` in `mcl_parser.py` does not yet include `!=` (`NEQ`), and unary `!` is
+  tokenized but not parsed. Adding `TokenType.NEQ` to `COMPARISON_OPS` fixes the first.
+- Panic-mode can swallow a second nearby error into the same resynchronization jump
+  (in `malformed_multi_error.mcl` the stray `)` is consumed together with the stray `}`).
+- Verified means "parses", not "behaves the same". The rule score is partly by construction
+  because the rules target the error classes the corruption engine generates.
+- The 100-example test set is small and no confidence intervals were computed.
 
-## Future work
+## Roadmap
 
-`future_work/` holds an unfinished plan to fine-tune a small code model with LoRA.
-It was never trained end to end and no reported result depends on it.
+| Status | Item |
+|---|---|
+| Done (Phase 1) | Lexer, parser, AST, dual recovery, structured errors |
+| Done (Phase 2) | Corruption engine, dataset, symbol table, semantic checks, three-address code, fix loop |
+| Done (Phase 3) | Rules / zero-shot / few-shot / hybrid repair, evaluation on 100 examples, final testing |
+| Future | Complete LoRA fine-tuning of Qwen2.5-Coder-0.5B-Instruct (or CodeT5+) on a GPU and compare with the base model |
+| Future | More language features (functions, arrays, strings, `for`) and real target code generation |
+| Future | Test-based verification so "verified" implies equivalent behavior; evaluation on real student errors |
